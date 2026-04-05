@@ -1,0 +1,24 @@
+@import "tailwindcss";
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  @apply bg-gradient-to-br from-purple-700 via-indigo-800 to-blue-700;
+}
+html {
+  scroll-behavior: smooth;
+}
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradientMove {
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
+}
+
